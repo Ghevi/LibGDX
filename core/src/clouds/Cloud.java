@@ -39,6 +39,8 @@ public class Cloud extends Sprite {
         fixtureDef.density = 1;
 
         Fixture fixture = body.createFixture(fixtureDef);
+        fixture.setUserData("Cloud");
+        fixture.setSensor(true); //Detects collision but let the body pass (useful for coins)
 
         shape.dispose();
     }
